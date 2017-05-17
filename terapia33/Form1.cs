@@ -14,7 +14,7 @@ namespace terapia33
         Image file;
         int imageX;
         int imageY;
-        int speed = 2;
+        int speed = 2;//predkosc
         int program = 1;
         public Form1()
         {
@@ -124,7 +124,7 @@ namespace terapia33
             {
                 PicBoxMovTimer.Enabled = false;
                 program = 1;
-                Close();
+                Close(); //tutaj trzeba zmienic zeby wychodzilo do forma poprzedniego!
             }
         }
     }
