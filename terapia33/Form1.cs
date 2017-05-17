@@ -14,6 +14,7 @@ namespace terapia33
         Image file;
         int imageX;
         int imageY;
+        int speed = 2;
         int program = 1;
         public Form1()
         {
@@ -55,13 +56,13 @@ namespace terapia33
             switch (program)
             {
                 case 1:
-                    imageX = imageX + 4;
+                    imageX = imageX + speed;
                     if (imageX > this.Width + pictureBox1.Width)
                         program = 2;
                     break;
                 case 2:
-                    imageX = imageX - 4;
-                    if (imageX < 4)
+                    imageX = imageX - speed;
+                    if (imageX < speed)
                     {
                         program = 3;
                         imageX = this.Width / 2;
@@ -70,13 +71,13 @@ namespace terapia33
                     }
                     break;
                 case 3:
-                    imageY = imageY + 4;
+                    imageY = imageY + speed;
                     if (imageY > this.Height + pictureBox1.Height)
                         program = 4;
                     break;
                 case 4:
-                    imageY = imageY - 4;
-                    if (imageY < 4)
+                    imageY = imageY - speed;
+                    if (imageY < speed)
                     {
                         program = 5;
                         imageX = 0;
@@ -85,8 +86,8 @@ namespace terapia33
                     }
                     break;
                 case 5:
-                    imageX = imageX + 4;
-                    imageY = imageY + 4;
+                    imageX = imageX + speed;
+                    imageY = imageY + speed;
                     if (imageX > this.Width + pictureBox1.Width && imageY > this.Height + pictureBox1.Height)
                     {
                         program = 6;
@@ -96,9 +97,9 @@ namespace terapia33
                     }
                     break;
                 case 6:
-                    imageX = imageX - 4;
-                    imageY = imageY + 4;
-                    if (imageX < 4)
+                    imageX = imageX - speed;
+                    imageY = imageY + speed;
+                    if (imageX < speed)
                     {
                         program = 1;
                         imageX = 0;
